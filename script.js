@@ -5,6 +5,14 @@ const machineScore = document.querySelector('#machine-score')
 let humanScoreNumber = 0
 let machineScoreNumber = 0
 
+/*Enums*/
+const GAME_OPTIONS = {
+    ROCK: 'rock',
+    PAPER: 'paper',
+    SCISSORS: 'scissors',
+}
+
+
 const playHuman = (humanChoice) => {
     console.log(humanChoice)
 
@@ -12,7 +20,7 @@ const playHuman = (humanChoice) => {
 }
 
 const playMachine = () => {
-    const choices = ['rock', 'paper', 'scissors']
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS]
     const randomNumber = Math.floor(Math.random() * 3)
 
 
